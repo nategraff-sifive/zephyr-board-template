@@ -1,0 +1,9 @@
+if BOARD_
+
+config BOARD
+	default "sifive_e21"
+
+config RISCV_ROM_BASE_ADDR
+	default 
+
+endif

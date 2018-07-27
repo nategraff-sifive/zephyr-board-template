@@ -1,0 +1,11 @@
+identifier: sifive_e21
+name: SiFive E21
+type: mcu
+arch: riscv32
+toolchain:
+  - zephyr
+ram: 16
+testing:
+  ignore_tags:
+    - net
+    - bluetooth

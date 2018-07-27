@@ -1,0 +1,17 @@
+/dts-v1/;
+
+/ {
+    chosen {
+        zephyr,console = &<NODE>;
+    };
+};
+
+&<NODE> { label = "uart0"; };
+&<NODE> { label = "uart1"; };
+&<NODE> { label = "spi0"; };
+&<NODE> { label = "spi1"; };
+&<NODE> { label = "spi2"; };
+&<NODE> { label = "gpio0"; };
+&<NODE> { label = "pwm0"; };
+&<NODE> { label = "pwm1"; };
+&<NODE> { label = "pwm2"; };
