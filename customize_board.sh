@@ -19,6 +19,7 @@ TEMPLATE_FILES=("Kconfig.board" "Kconfig.defconfig" "${RENAME_FILES[@]}")
 
 for template_file in "${TEMPLATE_FILES[@]}"
 do
+    cp templates/$template_file ./
     sed -i $template_file -e "s/<BOARD_IDENTIFIER>/$BOARD_IDENTIFIER/g" \
         -e "s/<BOARD_NAME>/$BOARD_NAME/g" -e "s/<ROM_BASE_ADDR>/$ROM_BASE_ADDR/"
 done
