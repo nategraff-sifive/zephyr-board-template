@@ -1,5 +1,7 @@
 /dts-v1/;
 
+/* Copy your board's DTS file here */
+
 / {
     chosen {
         zephyr,console = &<NODE>;
