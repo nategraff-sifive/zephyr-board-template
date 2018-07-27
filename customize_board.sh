@@ -8,7 +8,11 @@ BOARD_IDENTIFIER=$(echo $BOARD_NAME | sed -e 's/-/_/g' | tr '[:lower:]' '[:upper
 echo "Using the name of the containing folder for the board identifier: $BOARD_NAME"
 echo "Using the upcase of that as an identifier: $BOARD_IDENTIFIER"
 
-read -p "Enter ROM boot address in hex (ex. 0x20000000, 0x20400000): " ROM_BASE_ADDR
+read -p "Do you want to boot from the default boot address 0x2040_0000? (Y/n): " DEFAULT_BASE_ADDR
+case $DEFAULT_BASE_ADDR in
+    [Nn]* ) read -p "Enter ROM boot address in hex (ex. 0x20000000, 0x20400000): " ROM_BASE_ADDR;;
+    * ) ROM_BASE_ADDR="0x20400000";;
+esac
 
 RENAME_FILES=("board_name.dts" "board_name.yaml" "board_name_defconfig")
 TEMPLATE_FILES=("Kconfig.board" "Kconfig.defconfig" "${RENAME_FILES[@]}")
