@@ -1,5 +1,5 @@
-identifier: sifive_e21
-name: SiFive E21
+identifier: <BOARD_NAME>
+name: SiFive E-Series Chip
 type: mcu
 arch: riscv32
 toolchain:

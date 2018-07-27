@@ -1,9 +1,9 @@
-if BOARD_
+if BOARD_<BOARD_IDENTIFIER>
 
 config BOARD
-	default "sifive_e21"
+	default "<BOARD_NAME>"
 
 config RISCV_ROM_BASE_ADDR
-	default 
+	default <ROM_BASE_ADDR> 
 
 endif
